@@ -6,8 +6,8 @@ server.use(express.json())
 const actionsRoutes = require('./actions/actions-router');
 const projectsRoutes = require('./projects/projects-router');
 
-// server.use('/actions', actionsRoutes)
-server.use('/projects', projectsRoutes)
+server.use('/api/actions', actionsRoutes)
+server.use('/api/projects', projectsRoutes)
 
 server.get('/', (req, res) => {
     res.send(`<h1>Server working</h1>`)
